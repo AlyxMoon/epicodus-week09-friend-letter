@@ -8,13 +8,13 @@ namespace FriendLetter.Controllers
     [Route("/")]
     public ActionResult Letter () 
     { 
-      return View(new LetterVariable("Lina", "Jasmine")); 
+      return View(new LetterVariable("Lina", "Jasmine", "Iceland", "Hawaii")); 
     }
 
     [Route("/postcard")]
-    public ActionResult Postcard (string recipient, string sender)
+    public ActionResult Postcard (string recipient, string sender, string destination, string desiredDestination)
     {
-      return View("Letter", new LetterVariable(recipient, sender));
+      return View("Letter", new LetterVariable(recipient, sender, destination, desiredDestination));
     }
 
     [Route("/hello")]
