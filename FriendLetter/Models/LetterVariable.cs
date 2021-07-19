@@ -1,4 +1,4 @@
-namespace FriendsLetter.Models
+namespace FriendLetter.Models
 {
   public class LetterVariable
   {
@@ -7,7 +7,13 @@ namespace FriendsLetter.Models
     public string Destination { get; set; }
     public string DesiredDestination { get; set; }
 
-    public LetterVariable(string recipient, string sender, string destination, string desiredDestination)
+    public LetterVariable () {}
+    public LetterVariable(
+      string recipient, 
+      string sender, 
+      string destination = "Iceland", 
+      string desiredDestination = "Hawaii"
+    )
     {
       Recipient = recipient;
       Sender = sender;
